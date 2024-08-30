@@ -1,0 +1,38 @@
+@import url(https://db.onlinewebfonts.com/c/757ff6da05e4f945c71c9751b485a9ad?family=Aeonik+Medium);
+@import url(https://db.onlinewebfonts.com/c/aba70892d13bd6680b12026d21dfe114?family=IBM+Plex+Sans);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html, body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+.active{
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+@media only screen and (max-width: 425px){
+    .active{
+       border-bottom: none;
+       padding-bottom: 0px;
+       font-weight: 700;
+    }
+}
+
+/* details summary{
+    cursor: pointer;
+    transition: margin 350ms ease-out !important;
+}
+details[open] summary{
+    margin-bottom: 10px;
+} */
+.slick-track {
+    display: flex;
+    gap: 1rem;
+}
+details > summary{
+    list-style-type: none;
+}
