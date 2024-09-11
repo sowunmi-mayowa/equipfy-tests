@@ -146,6 +146,7 @@ const BuyCategories = () => {
     const handleErrors = (error) => {
       setError(error)
     }
+    console.log(categoryData)
   return (
     <div>
 

@@ -11,6 +11,7 @@ const Search = ({ onSearch, onHoursResult, onPriceResult, onError }) => {
   const [priceValue, setPriceValue] = useState([0, 1000000])
   const [years, setYears] = useState([])
   const navigate = useNavigate()
+  const API_URL = process.env.REACT_APP_BACKEND_URL;
 
   const categories = [
     { alt: 'Cold Planner', category: 'cold-planner'},
@@ -44,7 +45,7 @@ const Search = ({ onSearch, onHoursResult, onPriceResult, onError }) => {
   const search = async (e) => {
     e.preventDefault()
     try{
-      const response = await fetch(`http://localhost:3000/equipments/byName/${text}`)
+      const response = await fetch(`${API_URL}/equipments/byName/${text}`)
   
       if(!response.ok){
         onError("Equipment Not Found")

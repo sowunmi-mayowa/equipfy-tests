@@ -25,11 +25,12 @@ const Buy = () => {
   const [price, setPrice] = useState([])
   const [hours, setHours] = useState([])
   const [searchResults, setSearchResults] = useState([])
+  const API_URL = process.env.REACT_APP_BACKEND_URL;
 
   useEffect(() => {
     const fetchEquipments = async () => {
       try{
-        const response = await fetch("http://localhost:3000/equipments")
+        const response = await fetch(`${API_URL}/equipments`)
         if (!response.ok) {
           throw new Error('Network response was not ok');
       }
